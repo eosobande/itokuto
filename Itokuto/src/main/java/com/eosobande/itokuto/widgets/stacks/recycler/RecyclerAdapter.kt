@@ -6,11 +6,15 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.eosobande.itokuto.Rectangle
+import com.eosobande.itokuto.State
+import com.eosobande.itokuto.modifiers.Widget
+import com.eosobande.itokuto.view
 import java.util.*
 import kotlin.collections.ArrayList
 
 
-abstract class RecyclerAdapter<D, H : WidgetHolder<D, out Item<D>>> :
+abstract class RecyclerAdapter<D, H : RecyclerAdapter.WidgetHolder<D, out RecyclerAdapter.Item<D>>> :
     RecyclerView.Adapter<H>() {
 
     open val itemsClickable: Boolean = true
@@ -101,8 +105,18 @@ abstract class RecyclerAdapter<D, H : WidgetHolder<D, out Item<D>>> :
 
     fun remove(position: Int) = differ.submitList(itemsCopy.apply { removeAt(position) })
 
-    fun removeAll() = differ.submitList(emptyList())
-
     fun clear() = differ.submitList(emptyList())
+
+    abstract class Item<D> : Widget {
+
+        var bound: Boolean = false
+            internal set
+
+        val data: State<D> = State()
+
+    }
+
+    abstract class WidgetHolder<D, I : Item<D>>(val item: I) :
+        RecyclerView.ViewHolder(item.widget.view())
 
 }
