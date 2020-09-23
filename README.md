@@ -184,7 +184,7 @@ we toggle the enabled state of the button and update the text object
     // You can use the pre-written custom adapter or create yours
     // this is an example of Itokuto's packaged recycler adapter
 
-    class ContactsAdapter : DataAdapter<Contact, ContactsAdapter.WidgetHolder>() {
+    class ContactsAdapter : RecyclerAdapter<Contact, ContactsAdapter.WidgetHolder>() {
 
         // supports filtering
         override fun onFilter(filter: String, data: Contact) =
