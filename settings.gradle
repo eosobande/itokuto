@@ -1,0 +1,3 @@
+include ':Itokuto'
+include ':app'
+rootProject.name = "Itokuto"
