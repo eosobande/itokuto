@@ -31,7 +31,7 @@ bintray {
         repo = 'maven'
         name = 'com.eosobande.itokuto'
         configurations = ['archives']
-        desc = 'Create reactibe ui in android programmatically.'
+        desc = 'Create reactive ui in android programmatically. Get rid of the boring and layout.xml files.'
         websiteUrl = 'https://github.com/eosobande/itokuto'
         vcsUrl = 'https://github.com/eosobande/itokuto.git'
         licenses = ["Apache-2.0"]

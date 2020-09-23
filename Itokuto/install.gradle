@@ -10,7 +10,7 @@ install {
                 groupId 'com.eosobande'
                 artifactId 'itokuto'
                 name 'Itokuto'
-                description 'Create reactibe ui in android programmatically.'
+                description 'Create reactive ui in android programmatically. Get rid of the boring and layout.xml files.'
                 url 'https://github.com/eosobande/itokuto'
 
                 licenses {

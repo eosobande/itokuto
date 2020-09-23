@@ -279,7 +279,7 @@ we toggle the enabled state of the button and update the text object
 [DrawableToolbox by duanhong169](https://github.com/duanhong169/DrawableToolbox)
 The missing DrawableToolbox for Android. Create drawables programmatically and get rid of the boring and always repeated drawable.xml files.
 
-Itokuto supports using programmatic drawables and this libary from duanhong169 makes creating programmatic drawables super easy and quick
+Itokuto supports using programmatic drawables and this library from duanhong169 makes creating programmatic drawables super easy and quick
 
 Example: a rounded rectangle with green solid color and a white ripple, this was used in No. 5 above
 ```kotlin
@@ -293,7 +293,7 @@ Example: a rounded rectangle with green solid color and a white ripple, this was
 ## 8. Be Creative
 Itokuto is very powerful and flexible. There's still a lot of possibilities and methods of usage but 
 I couldn't put everything into this README document. 
-If you have any problems using this libary please create an issue and I'll respond swiftly.
+If you have any problems using this library please create an issue and I'll respond swiftly.
 
 THANK YOU!!!
 
