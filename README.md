@@ -3,7 +3,7 @@ Add the dependency to your build.gradle
 
 ```groovy
     dependencies {
-	    implementation 'com.eosobande:itokuto:1.0.0'
+        implementation 'com.eosobande:itokuto:1.0.0'
     }
 ```
 
@@ -150,7 +150,7 @@ we toggle the enabled state of the button and update the text object
 
     // contact layout item
 
-    class ContactItem(override val context: Context) : Widget, RecyclerAdapter.Item<Contact>() {
+    class ContactItem(override val context: Context) : RecyclerAdapter.Item<Contact>() {
 
         override val widget: Widget
             get() =
