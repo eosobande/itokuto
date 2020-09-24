@@ -7,6 +7,9 @@ Add the dependency to your build.gradle
     }
 ```
 
+# Sample Application
+[Itokuto sample application](https://github.com/eosobande/itokuto-sample-app) 
+
 # How to use
 ## 1. Layout: create a new class and implement the Widget interface
 
