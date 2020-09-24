@@ -4,4 +4,4 @@ import android.content.Context
 import android.widget.Space
 import com.eosobande.itokuto.modifiers.Widget
 
-data class Spacer(override val context: Context) : Widget.Modifier<Space, Spacer>(Space(context))
+class Spacer(override val context: Context) : Widget.Modifier<Space, Spacer>(Space(context))

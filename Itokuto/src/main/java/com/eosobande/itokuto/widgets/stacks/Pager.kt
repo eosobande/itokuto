@@ -7,15 +7,13 @@ import androidx.viewpager2.widget.ViewPager2
 import com.eosobande.itokuto.modifiers.PagerWidget
 
 
-data class Pager(override val context: Context) :
-    PagerWidget.Modifier<Pager>(ViewPager2(context)) {
+class Pager(override val context: Context) : PagerWidget.Modifier<Pager>(ViewPager2(context)) {
 
     constructor(context: Context, adapter: RecyclerView.Adapter<*>) : this(context) {
         adapter(adapter)
     }
 
-    interface
-    PagerDelegate {
+    interface PagerDelegate {
 
         val pageCount: Int
 

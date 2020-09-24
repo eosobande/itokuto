@@ -5,5 +5,5 @@ import androidx.recyclerview.widget.RecyclerView
 import com.eosobande.itokuto.modifiers.RecyclerWidget
 
 
-data class Recycler(override val context: Context) :
+class Recycler(override val context: Context) :
     RecyclerWidget.Modifier<Recycler>(RecyclerView(context))

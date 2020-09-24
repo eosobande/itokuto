@@ -5,5 +5,5 @@ import androidx.core.widget.NestedScrollView
 import com.eosobande.itokuto.modifiers.NestedScrollWidget
 
 
-data class NestedScroll(override val context: Context) :
+class NestedScroll(override val context: Context) :
     NestedScrollWidget.Modifier<NestedScroll>(NestedScrollView(context))

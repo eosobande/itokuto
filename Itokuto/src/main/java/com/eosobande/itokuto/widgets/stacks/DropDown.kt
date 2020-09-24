@@ -10,7 +10,7 @@ import com.eosobande.itokuto.HasGravity
 import com.eosobande.itokuto.modifiers.StackWidget
 
 
-data class DropDown(override val context: Context) :
+class DropDown(override val context: Context) :
     StackWidget.Modifier<Spinner, DropDown>(Spinner(context)), HasGravity<DropDown> {
 
     override fun gravity(gravity: Int) = this { view.gravity = gravity }

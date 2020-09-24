@@ -4,7 +4,7 @@ import android.content.Context
 import com.eosobande.itokuto.State
 import com.eosobande.itokuto.modifiers.ButtonWidget
 
-data class CheckBox(override val context: Context) :
+class CheckBox(override val context: Context) :
     ButtonWidget.Modifier<android.widget.CheckBox, CheckBox>(android.widget.CheckBox(context)) {
 
     constructor(context: Context, text: State<String>) : this(context) {

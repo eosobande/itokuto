@@ -9,15 +9,14 @@ class State<T> : ObservableField<T> {
     constructor() : super()
     constructor(value: T) : super(value)
 
-    inline operator fun invoke(crossinline block: (T) -> Unit) =
-        apply {
-            addOnPropertyChangedCallback(object : Observable.OnPropertyChangedCallback() {
-                override fun onPropertyChanged(sender: Observable?, propertyId: Int) {
-                    @Suppress("UNCHECKED_CAST")
-                    block(get())
-                }
-            })
-        }
+    inline operator fun invoke(crossinline block: (T) -> Unit) = apply {
+        addOnPropertyChangedCallback(object : Observable.OnPropertyChangedCallback() {
+            override fun onPropertyChanged(sender: Observable?, propertyId: Int) {
+                @Suppress("UNCHECKED_CAST")
+                block(get())
+            }
+        })
+    }
 
     operator fun invoke(value: T) = set(value)
 

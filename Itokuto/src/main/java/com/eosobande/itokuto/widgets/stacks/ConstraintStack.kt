@@ -4,5 +4,5 @@ import android.content.Context
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.eosobande.itokuto.modifiers.ConstraintWidget
 
-data class ConstraintStack(override val context: Context) :
+class ConstraintStack(override val context: Context) :
     ConstraintWidget.Modifier<ConstraintStack>(ConstraintLayout(context))

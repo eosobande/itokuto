@@ -27,20 +27,13 @@ internal val Widget.modifier: Widget.Modifier<*, *>
     }
 
 val Int.dp: Int
-    get() =
-        TypedValue.applyDimension(
-            TypedValue.COMPLEX_UNIT_DIP,
-            toFloat(),
-            displayMetrics
-        ).toInt()
+    get() = TypedValue
+        .applyDimension(TypedValue.COMPLEX_UNIT_DIP, toFloat(), displayMetrics)
+        .toInt()
 
 val Float.dp: Float
-    get() =
-        TypedValue.applyDimension(
-            TypedValue.COMPLEX_UNIT_DIP,
-            toFloat(),
-            displayMetrics
-        )
+    get() = TypedValue
+        .applyDimension(TypedValue.COMPLEX_UNIT_DIP, this, displayMetrics)
 
 val Number.sp: Float
     get() =

@@ -7,7 +7,7 @@ import com.eosobande.itokuto.State
 import com.eosobande.itokuto.modifiers.ImageWidget
 
 
-data class Image(override val context: Context) :
+class Image(override val context: Context) :
     ImageWidget.Modifier<ImageView, Image>(ImageView(context)) {
 
     constructor(context: Context, image: Drawable? = null) : this(context) {

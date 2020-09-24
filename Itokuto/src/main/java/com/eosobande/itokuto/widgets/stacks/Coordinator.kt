@@ -5,5 +5,5 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.eosobande.itokuto.modifiers.CoordinatorWidget
 
 
-data class Coordinator(override val context: Context) :
+class Coordinator(override val context: Context) :
     CoordinatorWidget.Modifier<Coordinator>(CoordinatorLayout(context))

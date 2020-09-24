@@ -30,6 +30,9 @@ Add the dependency to your build.gradle
     }
 ```
 
+The widget val property ideally should be a computed property since we do not need a reference for 
+the instance.
+ 
 We get a relative layout with width and height of match_parent, and a centered text view with
 width and height of wrap_content and 10 dp margin on all sides.
 

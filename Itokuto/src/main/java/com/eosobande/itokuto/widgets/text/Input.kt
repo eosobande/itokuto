@@ -5,9 +5,9 @@ import android.widget.EditText
 import com.eosobande.itokuto.State
 import com.eosobande.itokuto.modifiers.InputWidget
 
-data class Input(
+class Input(
     override val context: Context,
-    val richContent: Boolean = false
+    richContent: Boolean = false
 ) : InputWidget.Modifier<EditText, Input>(
     if (richContent) RichEditText(context) else EditText(context)
 ) {

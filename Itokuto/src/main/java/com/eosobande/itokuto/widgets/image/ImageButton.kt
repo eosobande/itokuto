@@ -5,7 +5,7 @@ import android.graphics.drawable.Drawable
 import com.eosobande.itokuto.State
 import com.eosobande.itokuto.modifiers.ImageWidget
 
-data class ImageButton(override val context: Context) :
+class ImageButton(override val context: Context) :
     ImageWidget.Modifier<android.widget.ImageButton, ImageButton>(android.widget.ImageButton(context)) {
 
     constructor(context: Context, image: Drawable? = null) : this(context) {
