@@ -1,3 +1,6 @@
+# Description
+Create reactive ui in android programmatically. Get rid of the boring and layout.xml files.
+
 # Installation
 Add the dependency to your build.gradle
 
