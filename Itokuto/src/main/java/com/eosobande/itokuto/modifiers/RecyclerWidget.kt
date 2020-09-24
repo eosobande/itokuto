@@ -36,15 +36,15 @@ interface RecyclerWidget : StackWidget {
             if (!view.canScrollHorizontally(1)) block(cast)
         }
 
-        inline fun onScroll(crossinline block: (recycler: T, dx: Int, dy: Int) -> Unit) =
-            this {
-                view.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-                    override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                        super.onScrolled(recyclerView, dx, dy)
-                        block(this@Modifier as T, dx, dy)
-                    }
-                })
-            }
+        inline fun onScroll(crossinline block: (recycler: T, dx: Int, dy: Int) -> Unit) = view {
+            addOnScrollListener(object : RecyclerView.OnScrollListener() {
+                @Suppress("UNCHECKED_CAST")
+                override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                    super.onScrolled(recyclerView, dx, dy)
+                    block(this@Modifier as T, dx, dy)
+                }
+            })
+        }
 
         fun smoothScrollTo(position: Int) = this { view.smoothScrollToPosition(position) }
 
